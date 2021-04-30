@@ -1,3 +1,8 @@
 1. 下载 rise
 2. 创建 log.txt
-3. 尝试 push
+3. 尝试 push ，失败
+4. 改用 token 登录
+
+-
+
+1.
