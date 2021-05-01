@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -13,7 +14,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -39,7 +40,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.3'
-
+    implementation 'androidx.multidex:multidex:2.0.1'
     implementation "io.insert-koin:koin-core:$koin_version"
     implementation "io.insert-koin:koin-android:$koin_version"
 
@@ -50,4 +51,11 @@ dependencies {
     implementation "com.mikepenz:iconics-views:5.2.8"
     implementation 'com.mikepenz:fontawesome-typeface:5.9.0.2-kotlin@aar'
     implementation 'com.blankj:utilcodex:1.30.6'
+
+    implementation "io.reactivex.rxjava3:rxjava:3.0.13-RC2"
+    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
+}
+
+androidExtensions {
+    experimental = true
 }

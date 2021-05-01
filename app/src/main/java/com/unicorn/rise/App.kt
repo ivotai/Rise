@@ -1,7 +1,7 @@
 package com.unicorn.rise
 
-import android.app.Application
 import android.content.Context
+import androidx.multidex.MultiDexApplication
 import cn.tee3.avd.AVDEngine
 import cn.tee3.avd.ErrorCode
 import cn.tee3.avd.RoomInfo
@@ -10,7 +10,7 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import org.koin.dsl.module
 
-class App : Application() {
+class App : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
 

@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.blankj.utilcode.util.ToastUtils
 import com.ruffian.library.widget.RConstraintLayout
 import com.unicorn.rise.model.MainMenu
 
@@ -33,6 +34,14 @@ class MainActivity : AppCompatActivity() {
             mainMenuAdapter.setNewInstance(MainMenu.all)
         }
         initRecyclerView()
+
+        RxBus.registerEvent(this,JoinRoomEvent::class.java,{
+            joinRoom()
+        })
+    }
+
+    fun joinRoom(){
+        ToastUtils.showLong("加入会议！")
     }
 
 }
