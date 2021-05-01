@@ -242,9 +242,9 @@ public class RoomBaseActivity extends FragmentActivity {
         }
 
         if (h > 0) {
-            formatTime = "幸会 " + hs + ":" + ms + ":" + ss + lostPercentStr;
+            formatTime = "" + hs + ":" + ms + ":" + ss + lostPercentStr;
         } else {
-            formatTime = "幸会 " + ms + ":" + ss + lostPercentStr;
+            formatTime = "" + ms + ":" + ss + lostPercentStr;
         }
         this.clock.setText(formatTime);
     }
