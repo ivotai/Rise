@@ -113,7 +113,7 @@ public class N2MSetting {
     }
 
     public String getRoomId() {
-        return this.sharedPref.getString(Key_roomId, "r106");//"1380390021-proxy-test");
+        return ConstValue.roomId;
     }
 
     public String getRoomToken() {

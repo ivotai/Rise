@@ -16,7 +16,6 @@ import cn.tee3.avd.AVDEngine;
 import cn.tee3.avd.ErrorCode;
 import cn.tee3.avd.MVideo;
 import cn.tee3.avd.RoomInfo;
-import cn.tee3.n2m.ui.util.AppKey;
 import cn.tee3.n2m.ui.util.N2MSetting;
 import cn.tee3.n2m.ui.util.ToastUtil;
 
@@ -133,7 +132,7 @@ public class N2MApplication extends Application implements AVDEngine.Listener {
     public void reInitAVDEngine() {
         Log.i(getClass().getName(), "reInitAVDEngine");
         AVDEngine.instance().uninit();
-        AVDEngine.instance().init(getApplicationContext(), this, N2MSetting.getInstance().getServerUrl(), AppKey.tee3_app_key, AppKey.tee3_secret_key);
+        AVDEngine.instance().init(getApplicationContext(), this, N2MSetting.getInstance().getServerUrl(), ConstValue.appKey, ConstValue.secretKey);
     }
 
     String logfile;

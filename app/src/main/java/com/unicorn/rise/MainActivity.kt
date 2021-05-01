@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import cn.tee3.avd.AVDEngine
 import cn.tee3.avd.Room
 import cn.tee3.avd.User
-import cn.tee3.n2m.ui.activity.JoinRoomActivity
+import cn.tee3.n2m.N2MApplication
 import cn.tee3.n2m.ui.activity.RoomLandscapeActivity
 import cn.tee3.n2m.ui.util.N2MSetting
 import cn.tee3.n2m.ui.util.ToastUtil
@@ -45,9 +45,7 @@ class MainActivity : AppCompatActivity() {
         initRecyclerView()
 
         RxBus.registerEvent(this, JoinRoomEvent::class.java, {
-            val intent = Intent()
-            intent.setClass(this, JoinRoomActivity::class.java)
-            startActivity(intent)
+            joinConference()
         })
 
         RxPermissions(this)
@@ -63,6 +61,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun joinConference() {
+        if (!AVDEngine.instance().isWorking) {
+            ToastUtil.showToast(this, R.string.engineNeedInit)
+            (application as N2MApplication).reInitAVDEngine()
+            return
+        }
         if (N2MSetting.getInstance().isMultiLive) { // only supported 640x480
             N2MSetting.getInstance().saveVideoResolution(1)
             AVDEngine.instance().setOption(
@@ -71,28 +74,32 @@ class MainActivity : AppCompatActivity() {
             )
         }
         AVDEngine.instance().setOption(AVDEngine.Option.eo_audio_autoGainControl_Enable, "false")
+
         val room = Room.obtain(ConstValue.roomId)
         room!!.setOption(Room.Option.ro_audio_option_codec, "opus")
-        if (null == room) {
-            ToastUtil.showToast(this, R.string.errNum)
-            return
-        }
+//        if (null == room) {
+//            Log.w(javaClass.name, "joinConference room is null. RoomId=$currentRoomId")
+//            ToastUtil.showToast(this, R.string.errNum)
+//            return
+//        }
         room.setOption(Room.Option.ro_media_use_dtls, "false")
         val user = User(N2MSetting.getInstance().userId, "测试用户", "")
         val password: String = ""
-            room.join(user, password, listener)
+        room.join(user, password, listener)
     }
 
 
-    private val listener = Room.JoinResultListener {
-        if (0 != it) {
-            val err = getString(R.string.joinError) + it
+    private val listener = Room.JoinResultListener { result ->
+        if (0 != result) {
+            val err = getString(R.string.joinError) + result
             ToastUtil.showLongToast(this, err)
             return@JoinResultListener
         }
 
         val intent = Intent()
-        intent.setClass(this, RoomLandscapeActivity::class.java)
+        intent.setClass(
+            this, RoomLandscapeActivity::class.java
+        )
         startActivity(intent)
     }
 
