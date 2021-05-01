@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.unicorn.rise.ConstValue;
+
 import java.util.UUID;
 
 import cn.tee3.avd.AVDEngine;
@@ -77,7 +79,7 @@ public class N2MSetting {
     }
 
     public String getServerUrl() {
-        return this.sharedPref.getString(Key_serverUrl, AppKey.tee3_avd_server);
+        return ConstValue.serverUrl;
     }
 
     public int getUIStype() {
