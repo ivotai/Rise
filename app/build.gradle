@@ -11,15 +11,25 @@ android {
     defaultConfig {
         applicationId "com.unicorn.rise"
         minSdkVersion 16
-        targetSdkVersion 30
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    signingConfigs {
+        release {
+            storeFile file("../unicorn.jks")
+            storePassword "unicorn"
+            keyAlias "unicorn"
+            keyPassword "unicorn"
+            v1SigningEnabled true
+            v2SigningEnabled false
+        }
+    }
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
