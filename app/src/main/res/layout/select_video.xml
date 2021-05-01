@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id = "@+id/id_select_video"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/TextSize10"
+        android:gravity="center_vertical">
+        <ImageView
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/video"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/TextSize17"
+            android:textColor="@color/white"
+            android:text="@string/videoSelect"
+            android:layout_marginLeft="@dimen/TextSize10"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/id_videos_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/width_1_80"
+        android:layout_marginTop="@dimen/width_2_80"
+        android:layout_marginBottom="@dimen/width_10_80"
+        android:layout_below="@id/id_users_title"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="1"/>
+    <Button
+        android:id="@+id/btn_select_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/TextSize17"
+        android:textColor="@color/white"
+        android:text="@string/videoSelect_confirm" />
+</LinearLayout>

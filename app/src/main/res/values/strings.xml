@@ -1,3 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">信访Demo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="addMeeging">加入房间</string>
+    <string name="openVideo">打开本地视频</string>
+    <string name="switchCamera">切换摄像头</string>
+    <string name="useBackCamera">使用后置摄像头</string>
+    <string name="useFrontCamera">使用前置摄像头</string>
+    <string name="frontCamera">FRONT_CAMERA</string>
+    <string name="switchVideo">切换上下视频（或长按上视频）</string>
+    <string name="videoSelect">当前共享视频列表</string>
+    <string name="videoSelect_confirm">确认选择(2路)</string>
+    <string name="openAudio">打开本地音频</string>
+    <string name="handsup">举手中...</string>
+    <string name="openSpeaker">打开本地免提</string>
+    <string name="closeSpeaker">取消本地免提</string>
+    <string name="closeAudio">关闭本地音频</string>
+    <string name="closeVideo">关闭本地视频</string>
+    <string name="closefailed">关闭失败</string>
+    <string name="handsTip">举手中,请等待主持人回应</string>
+    <string name="help">帮助</string>
+    <string name="on">开</string>
+    <string name="off">关</string>
+    <string name="send">发送</string>
+    <string name="apply">应用</string>
+    <string name="lvrec_title">直播录制列表</string>
+    <string name="users_title">人员列表</string>
+    <string name="lvrec_record_status">正在录制</string>
+    <string name="lvrec_live_status">暂停直播</string>
+    <string name="lvrec_operate">分享链接</string>
+    <!-- setting -->
+    <string name="sdkversion">Open-AVD</string>
+    <string name="serverurl">服务地址</string>
+    <string name="uistyle">界面风格</string>
+    <string name="uistyle_landscape">横屏</string>
+    <string name="uistyle_portrait">竖屏</string>
+    <string name="roomoption">房间选项</string>
+    <string name="videocodec">视频编码</string>
+    <string name="videocodec_h264_sw">264软</string>
+    <string name="videocodec_h264_hw">264硬</string>
+    <string name="videocodec_h265_sw">265软</string>
+    <string name="videocodec_h265_hw">265硬</string>
+    <string name="videocodec_vp8">VP8</string>
+    <string name="videoshow">视频显示</string>
+    <string name="videoshow_fullscreen">全屏幕</string>
+    <string name="videoshow_fullimage">全图像</string>
+    <string name="videoresolution">视频分辨率</string>
+    <string name="videoresolution_320" >CIF-352 </string>
+    <string name="videoresolution_640" >标清-640</string>
+    <string name="videoresolution_1280">高清720P</string>
+    <string name="datachannel_net">数据通道</string>
+    <string name="advanced_setting">高级设置</string>
+    <string name="datachannel_net_udp">UDP</string>
+    <string name="datachannel_net_tcp">TCP</string>
+    <string name="otheroption">其他选项</string>
+    <string name="otheroption_auto_video">视频自动打开</string>
+    <string name="otheroption_auto_audio">音频自动打开</string>
+    <string name="otheroption_rtmp_pusher">直播连麦模式</string>
+    <string name="videooption_scalefull">视频满屏显示</string>
+    <string name="videooption_autorotation">视频自动旋转(横屏状态下禁用)</string>
+    <string name="audiooption_audio_aec_on">音频ACE</string>
+    <string name="audiooption_audio_aec_DAE_on">音频DAE</string>
+    <string name="audiooption_audio_agc_on">音频AGC</string>
+    <string name="loglevel">日志等级</string>
+    <string name="loglevel_verbose">详细</string>
+    <string name="loglevel_info">正常</string>
+    <string name="loglevel_warning">错误</string>
+    <!-- hint -->
+    <string name="inMeetignNum">房间号，如r1</string>
+    <string name="inUsername">请输入用户名</string>
+    <string name="inPswd">请输入密码</string>
+    <string name="inMessge">请输入消息</string>
+    <!-- tips -->
+    <string name="tip">提示</string>
+    <string name="exitTip">您确定要退出房间吗</string>
+    <string name="exit4connectFailedTip">连接服务器失败，退出房间。请检查网络</string>
+    <string name="noMeetNum">请输入房间号</string>
+    <string name="noUser">用户名为空！</string>
+    <string name="noPswd">密码为空！</string>
+    <string name="errNum">房间号无效！</string>
+    <string name="joinError">加入房间失败，请检查系统。错误码：</string>
+    <string name="selectVideo">请选择显示的视频，不超过两路</string>
+    <string name="noSendMessage">发送内容不能为空！</string>
+    <string name="engineNeedInit">Open-AVD引擎没有初始化成功</string>
+    <string name="connectingTip">正在连接服务器，请稍候</string>
+    <string name="linkcopyok">链接已经拷贝到剪切板</string>
+    <!-- error -->
+    <string name="avdinitfailed">引擎初始化失败，请检查系统。错误码：</string>
+    <string name="connectFailure">网络连接不给力！</string>
+    <string name="responseNull">网络异常，请检查网络是否给力</string>
+    <string name="videopubfailed">打开本地视频失败！</string>
+    <string name="localVideo">本地视频</string>
+    <string name="localAudio">本地音频</string>
+    <string name="handFree">免提</string>
+    <string name="switchVideo2">切换窗口</string>
+    <string name="createLiveFailed">创建直播失败。请检查系统</string>
+    <string name="createrecordFailed">创建录制失败。请检查系统</string>
+    <!-- tag define -->
+    <item type="id" name="tag_userId"></item>
+    <item type="id" name="tag_status"></item>
 </resources>

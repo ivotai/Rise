@@ -17,6 +17,10 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".App"
@@ -33,6 +37,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="cn.tee3.n2m.ui.activity.JoinRoomActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="cn.tee3.n2m.ui.activity.RoomPortraitActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="cn.tee3.n2m.ui.activity.RoomLandscapeActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="cn.tee3.n2m.ui.activity.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/default_ui_bg"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="cn.tee3.n2m.ui.activity.AdvancedSettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/default_ui_bg"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
     </application>
 
 </manifest>

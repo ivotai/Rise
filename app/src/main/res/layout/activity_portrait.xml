@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_main_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.tee3.n2m.ui.fragment.VideosFragment
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/fs_video_fragment" />
+
+    <FrameLayout
+        android:id="@+id/id_upcontents"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/height_10_80"
+        android:visibility="gone"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/id_inroomtimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:text="幸会 00:00"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="@dimen/TextSize20" />
+    <TextView
+        android:id="@+id/id_roomid"
+        android:layout_marginTop="@dimen/height_3_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:text="房间号 r555"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="@dimen/TextSize14" />
+
+    <cn.tee3.n2m.ui.fragment.T3RoomToolbar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_t3roomtoolbar"
+        android:alpha = "0.8"
+        android:layout_gravity="center_horizontal|bottom"/>
+
+</FrameLayout>

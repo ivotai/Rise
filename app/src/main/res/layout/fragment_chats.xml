@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fs_chats_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/meeting"
+    android:alpha="0.7"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llSend"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/TextSize10"
+        android:paddingRight="@dimen/TextSize10">
+        <EditText
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/etSend"
+            android:background="@color/white"
+            android:textSize="@dimen/TextSize14"
+            android:hint="@string/inMessge"
+            android:padding="@dimen/TextSize06"/>
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/TextSize17"
+            android:text="@string/send"/>
+    </LinearLayout>
+   <!-- <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_above="@id/llSend"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+    </android.support.v4.widget.SwipeRefreshLayout>-->
+    <ListView
+        android:id="@+id/lvChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_5_80"
+        android:layout_above="@id/llSend"
+        android:layout_alignParentTop="true"/>
+</RelativeLayout>
+

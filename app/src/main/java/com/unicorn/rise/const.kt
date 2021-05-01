@@ -8,6 +8,9 @@ package com.unicorn.rise
 //    public static final String
 //            tee3_secret_key = "demo_secret";
 
-const val serverUrl = "http://192.168.0.128"
-const val appKey = "demo_access"
-const val secretKey= "demo_secret"
+object ConstValue {
+    const val serverUrl = "http://192.168.0.128"
+    const val appKey = "demo_access"
+    const val secretKey = "demo_secret"
+    const val roomId = "10000000000"
+}

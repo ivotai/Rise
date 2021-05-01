@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/TextSize10"
+    android:paddingRight="@dimen/TextSize10">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/height_3_80"
+        android:background="@drawable/login_headbg"
+        android:padding="@dimen/TextSize14"
+        android:src="@drawable/login_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/TextSize10"
+        android:background="@drawable/login_inputbox"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/TextSize10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/TextSize05"
+            android:src="@drawable/loginicon_meetingnb" />
+
+        <LinearLayout style="@style/lineVertical" />
+
+        <EditText
+            android:id="@+id/id_roomId"
+            style="@style/loginInput"
+            android:hint="@string/inMeetignNum" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/TextSize10"
+        android:background="@drawable/login_inputbox"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/TextSize10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/TextSize09"
+            android:src="@drawable/loginicon_user" />
+
+        <LinearLayout style="@style/lineVertical" />
+
+        <EditText
+            android:id="@+id/id_userName"
+            style="@style/loginInput"
+            android:hint="@string/inUsername"
+            android:maxLength="32" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/TextSize10"
+        android:background="@drawable/login_inputbox"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/TextSize10"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/TextSize05"
+            android:src="@drawable/loginicon_psw" />
+
+        <LinearLayout style="@style/lineVertical" />
+
+        <EditText
+            android:id="@+id/id_password"
+            style="@style/loginInput"
+            android:hint="@string/inPswd"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_joinroom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_7_80"
+        android:layout_marginTop="@dimen/TextSize20"
+        android:background="@drawable/btn_selector"
+        android:gravity="center"
+        android:padding="@dimen/TextSize05"
+        android:text="@string/addMeeging"
+        android:textColor="@color/white"
+        android:textSize="@dimen/TextSize17" />
+
+    <ImageButton
+        android:id="@+id/id_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="@dimen/height_5_80"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_setting" />
+</LinearLayout>

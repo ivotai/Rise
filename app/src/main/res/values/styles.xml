@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="loginInput">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/TextSize17</item>
+        <item name="android:layout_marginLeft">@dimen/TextSize05</item>
+        <item name="android:padding">@dimen/TextSize05</item>
+        <item name="android:textColorHint">@color/hintWhite</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:alpha">178</item>
+    </style>
+    <style name="loginLinear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_6_80</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">@dimen/TextSize10</item>
+        <item name="android:background">@drawable/mainbg</item>
+    </style>
+    <style name="lineVertical">
+        <item name="android:layout_width">@dimen/TextSize01</item>
+        <item name="android:layout_height">@dimen/TextSize22</item>
+        <item name="android:background">#30000000</item>
+        <item name="android:layout_margin">@dimen/TextSize05</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="lineHorizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/TextSize01</item>
+        <item name="android:background">@drawable/line1</item>
+    </style>
+    <style name="default_ui_bg" parent="android:Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+</resources>
