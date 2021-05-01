@@ -11,8 +11,8 @@
 
         <com.ruffian.library.widget.RFrameLayout
             android:id="@+id/RFrameLayout"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:background_normal="@color/white"
             app:corner_radius="16dp"
             app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -20,7 +20,16 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:id="@+id/iconicsImageView"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_margin="24dp" />
+
+        </com.ruffian.library.widget.RFrameLayout>
 
         <TextView
             android:id="@+id/textView"
