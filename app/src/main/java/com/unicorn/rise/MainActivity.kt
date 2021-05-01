@@ -30,16 +30,7 @@ class MainActivity : AppCompatActivity() {
 
             val mainMenuAdapter = MainMenuAdapter()
             recyclerView.adapter = mainMenuAdapter
-            mainMenuAdapter.setNewInstance(
-                mutableListOf(
-                    MainMenu(name = "远程接谈"),
-                    MainMenu(name = "信息互动"),
-                    MainMenu(name = "材料须知"),
-                    MainMenu(name = "进度查询"),
-                    MainMenu(name = "信访历史"),
-                    MainMenu(name = "回执签收")
-                )
-            )
+            mainMenuAdapter.setNewInstance(MainMenu.all)
         }
         initRecyclerView()
     }
