@@ -163,7 +163,7 @@ public class N2MSetting {
     }
 
     public String getVideoResolutionOption() {
-        int cur = getVideoResolution();
+        int cur =getVideoResolution();
 //        String cap = "{\"width\":288,\"height\":352,\"maxFPS\":30}";
 //        if (2 == cur) {
 //               cap = "{\"width\":720,\"height\":1280,\"maxFPS\":15}";
@@ -182,7 +182,8 @@ public class N2MSetting {
 //        width = 640,height = 480,fps = 30,rotation = 270
 //        width = 480,height = 640,fps = 30,rotation = 270
 //        目标355x288，会优先选择了反向分辨率480x640,270,而不是选择355x288,270;
-        return cap;
+//        return cap;
+        return  "{\"width\":1920,\"height\":1080,\"maxFPS\":15}";
     }
 
     public String getDataChannelNetOption() {

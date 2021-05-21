@@ -9,6 +9,7 @@ package com.unicorn.rise
 //            tee3_secret_key = "demo_secret";
 
 object ConstValue {
+//    const val serverUrl = "132.0.6.32"
     const val serverUrl = "192.168.0.128"
     const val appKey = "demo_access"
     const val secretKey = "demo_secret"

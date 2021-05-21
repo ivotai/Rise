@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId "com.unicorn.rise"
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 19
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -24,7 +24,7 @@ android {
             keyAlias "unicorn"
             keyPassword "unicorn"
             v1SigningEnabled true
-            v2SigningEnabled false
+            v2SigningEnabled true
         }
     }
     buildTypes {
@@ -40,6 +40,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
     }
 }
 
